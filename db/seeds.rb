@@ -35,9 +35,9 @@ puts "5 skills created"
     )
   end
   
-  puts "9 portfolio items created"
+  puts "8 portfolio items created"
   
-  1.times do |portfolio_item|
+1.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
     subtitle: "Angular",
@@ -46,3 +46,13 @@ puts "5 skills created"
     thumb_image: "https://placeholdit.co//i/350x200?",
     )
   end
+  
+  puts "1 portfolio item created"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+
+  puts "3 technologies created"
