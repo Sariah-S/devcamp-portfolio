@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Sariah-S/schriever_view_tool
+  revision: bd63471d72772c1970fd0865715fcfe0ae1ec4d6
+  specs:
+    schriever_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -196,6 +202,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
+  schriever_view_tool!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
