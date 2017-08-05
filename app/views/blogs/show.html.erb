@@ -1,17 +1,25 @@
+<div class="container portfolio-container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image, width: '100%' %>
+    </div>
 
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
 
- <div class="col-sm-8 blog-main">
-   
-    <h2><%= @blog.title %></h2>
-    
-    <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> 
-    
-    <p>
-       <%= @blog.body %>
-    </p>
+      <hr>
 
- </div>
+      <em><%= @portfolio_item.subtitle %></em>
 
+      <p><%= @portfolio_item.body %></p>
 
+      <hr>
 
+      <h3>Technologies Used:</h3>
 
+      <% @portfolio_item.technologies.each do |t| %>
+      <p><%= t.name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
