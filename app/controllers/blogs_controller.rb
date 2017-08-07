@@ -9,7 +9,7 @@ def index
   if logged_in?(:site_admin)
     @blogs = Blog.recent.page(params[:page]).per(5)
   else
-    @blogs = Blog.published..recent.page(params[:page]).per(5)
+    @blogs = Blog.published.recent.page(params[:page]).per(5)
   end
     @page_title = "My Portfolio Blog"
 end
@@ -91,6 +91,6 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :topic_id)
   end
 end
