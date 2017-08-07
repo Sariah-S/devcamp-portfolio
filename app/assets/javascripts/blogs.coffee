@@ -1,3 +1,12 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+jQuery(document).on 'turbolink:load', ->
+  comments = $('#comments')
+  if comments.length > 0 
+    App.global_chat = App.cable.subscriptions.create {
+      channel: "BlogsChannel"
+      blog_id: comments.data('blog-id')
+    },
+    connected: ->
+    disconnected: ->
+    received: (data) ->
+      comments.append data['comment']
+    
