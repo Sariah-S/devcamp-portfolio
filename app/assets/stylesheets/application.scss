@@ -236,12 +236,13 @@ h6, .h6 {
 }
 
 .app-card-container {
-  color: black;
+  color: white;
   text-align: left;
 }
 
 .app-card-container > .card {
   padding: 40px;
+  background-color: #2D2D2D;
 }
 
 .profile-img {
@@ -261,3 +262,9 @@ h6, .h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.cover-heading {
+  color: orange;
+}
+
+
